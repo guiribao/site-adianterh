@@ -1,0 +1,31 @@
+{
+  "start": {
+    "title": "Muito prazer,",
+    "subtitle": "Somos a Adiante RH, gestão de pessoas em alta performance.",
+    "slides": [
+      { 
+        "draw": "target",
+        "description": "Oferecemos soluções de desenvolvimento humano, de forma personalizada, adaptado para a realidade do seu negócio."
+      },
+      { 
+        "draw": "team",
+        "description": "Ajudamos empresas a estruturar e treinar RHs com bases estratégicas fortes."
+      }
+    ]
+  },
+  "solutions": {
+    "title": "Soluções",
+    "subtitle": "Com o que podemos te ajudar hoje?",
+    "slides": []
+  },
+  "contact": {
+    "title": "Contato",
+    "subtitle": "Ficou com alguma dúvida?",
+    "slides": [
+      { 
+        "draw": "contact",
+        "description": "Entre em contato conosco, responderemos o mais breve possível ..."
+      }
+    ]
+  }
+}

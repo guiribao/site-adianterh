@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;700&display=swap");
+
+:root {
+  font-size: 18px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Outfit, "sans-serif";
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.app {
+  background-color: #222;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  height: 100vh;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #222;
+}
+
+.app-header nav {
+  border-bottom: 1px solid #eee;
+  background: #f9f9f9;
+  box-shadow: -10px 5px 10px -8px #000;
+}
+
+.app-description {
+  height: 100%;
+  background: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-description .app-description__manifest {
+  display: none;
+}
+
+.app-description .app-description__art {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+}
+
+.app-description .app-description__art img {
+  width: 256px;
+  max-height: 200px;
+}
+
+.app-description .app-description__art p {
+  max-width: 75%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .app-description {
+    flex-direction: row;
+  }
+
+  .app-description .app-description__manifest {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10%;
+    background-color: #f7f7f7;
+  }
+
+  .app-description .app-description__manifest h2 {
+    color: #0aa9af;
+    font-size: 64px;
+  }
+
+  .app-description .app-description__manifest p {
+    color: #575757;
+    font-size: 1.4em;
+    font-weight: 700;
+    line-height: 1.5em;
+    padding: 15px 0 0 0;
+  }
+
+  .app-description .app-description__manifest p span {
+    padding: 0 0 3px 0;
+    border-bottom: 6px solid #0aa9af;
+  }
+
+  .app-description .app-description__art {
+    gap: 50px;
+  }
+
+  .app-description .app-description__art img {
+    width: 384px;
+  }
+
+  .app-description .app-description__art p {
+    max-width: 60%;
+    margin: 0;
+    font-size: 1.4em;
+    font-weight: 500;
+    line-height: 1.5em;
+    color: #888;
+  }
+}
+
+.app-menu {
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-menu_logo img {
+  height: 28px;
+}
+
+.app-menu_links {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.app-menu_links li a {
+  color: #0aa9af;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all linear 0.079s;
+}
+
+.app-menu_links li a:hover {
+  color: #575757;
+  border-bottom: 3px solid #575757;
+}
+
+.solucoes {
+  background-color: white;
+  padding: 50px 0;
+}
+
+.solucoes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 70px auto;
+  background-color: white;
+  color: #222;
+}
+
+@media screen and (min-width: 1024px) {
+  .solucoes-list {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .solucoes-list > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  .solucoes-list > div > img {
+    height: 48px;
+  }
+  .solucoes-list > div > p { 
+    text-align: center;
+    width: 260px;
+    padding: 0 10px;
+  }
+}
+
+.disclaimer {
+  padding: 50px 0 10px 0;
+  
+  font-size: 1.2em;
+}
+
+.disclaimer > div h2 {
+  margin: 0 0 30px 0 ;
+}
+
+.disclaimer > div p {
+  padding: 0 30px;
+  line-height: 33px;
+  margin: 0 auto;
+}
+
+.disclaimer-list {
+  flex-direction: row;
+  justify-content: center;
+  line-height: 42px;
+  padding: 0 40px;
+}
+
+.contato {
+  background-image: url("../../public/images/siga_conosco.jpg");
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  padding: 100px 0;
+}
+
+.contato div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contato h2 {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.contato a {
+  margin: 10px auto;
+  position: relative;
+  max-width: 180px;
+  padding: 8px 12px;
+  text-align: center;
+  background-color: #0aa9af;
+  border: 3px solid #0aa9af;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all linear 0.1s;
+}
+
+.contato a:hover {
+  background-color: transparent;
+  color: black;
+  transform: scale(1.25);
+  border: 3px solid #0aa9af;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  padding: 100px 0px;
+}
+
+footer img {
+  height: 128px;
+  width: 128px;
+}
+
+footer svg {
+  height: 48px;
+  fill: #f14e76;
+}
