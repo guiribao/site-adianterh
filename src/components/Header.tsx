@@ -5,13 +5,13 @@ import HeaderProps from "../interfaces/IHeader";
 import contents from "../slides.json";
 
 export default function Header(props: HeaderProps) {
-  let i = 0;
   let { content } = props;
   let pageContent = contents[content];
 
   let [slide, setSlide] = useState({});
 
   useEffect(() => {
+    let i = 0;
     let timerSlide = null;
     let updateSlide = () => {
       setSlide(pageContent.slides[i]);

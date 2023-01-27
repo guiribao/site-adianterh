@@ -55,6 +55,7 @@ export default function Home() {
           <h2>Siga nessa jornada conosco!</h2>
           <a
             target="_blank"
+            rel="noreferrer"
             href="https://api.whatsapp.com/send/?phone=+5551997589087&text=Olá, AdianteRH!"
           >
             Fazer contato
