@@ -11,19 +11,19 @@ export default function Header(props: HeaderProps) {
 
   let [slide, setSlide] = useState({});
 
-  const updateSlide = () => {
-    setSlide(pageContent.slides[i]);
-
-    if (i === pageContent.slides.length - 1) {
-      i = 0;
-      return;
-    }
-
-    i += 1;
-  };
-
   useEffect(() => {
     let timerSlide = null;
+    let updateSlide = () => {
+      setSlide(pageContent.slides[i]);
+  
+      if (i === pageContent.slides.length - 1) {
+        i = 0;
+        return;
+      }
+  
+      i += 1;
+    };
+
     updateSlide();
 
     if (timerSlide) {

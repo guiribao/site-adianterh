@@ -62,7 +62,7 @@ export default function Home() {
         </div>
       </section>
       <footer>
-        <Image src="./images/logo.svg" />
+        <Image src="./images/logo.svg" alt="Adiante RH" />
         <h5>Adiante RH</h5>
         <svg
           className="cs-ico-instagram"

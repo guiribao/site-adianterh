@@ -44,11 +44,11 @@ export default function Home() {
       <section className="contato">
         <div className="container">
           <h2>Siga nessa jornada conosco!</h2>
-          <a target="_blank" href="https://api.whatsapp.com/send/?phone=+5551997589087&text=Olá, AdianteRH!">Fazer contato</a>
+          <a target="_blank" rel="noreferrer" href="https://api.whatsapp.com/send/?phone=+5551997589087&text=Olá, AdianteRH!">Fazer contato</a>
         </div>
       </section>
       <footer>
-        <Image src="./images/logo.svg" />
+        <Image src="./images/logo.svg" alt="Adiante RH" />
         <h5>Adiante RH</h5>
         <svg
           className="cs-ico-instagram"
