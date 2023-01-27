@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import HeaderProps from "../interfaces/IHeader";
 import contents from "../slides.json";
@@ -37,7 +38,7 @@ export default function Header(props: HeaderProps) {
       <nav>
         <div className="container app-menu">
           <div className="app-menu_logo">
-            <img src=" ./images/logo.svg" />
+            <Image src=" ./images/logo.svg" />
           </div>
           <ul className="app-menu_links">
             <li>
@@ -64,7 +65,7 @@ export default function Header(props: HeaderProps) {
           </p>
         </div>
         <div className="app-description__art">
-          <img src={`./images/draw/${slide?.draw}.svg`} alt="" />
+          <Image src={`./images/draw/${slide?.draw}.svg`} alt="AdianteRH Draw" />
           <p>{slide?.description}</p>
         </div>
       </section>

@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import Header from "../components/Header";
 
 export default function Home() {
@@ -27,7 +28,7 @@ export default function Home() {
         </div>
         <section className="container solucoes-list">
           <div>
-            <img src="./images/metricas.png" />
+            <Image src="./images/metricas.png" alt="Metricas" />
             <h5>Estruturação</h5>
             <p>
               Ajudamos você e sua empresa a estruturar processos na área de
@@ -35,12 +36,12 @@ export default function Home() {
             </p>
           </div>
           <div>
-            <img src="./images/livro.png" />
+            <Image src="./images/livro.png" alt="Livros" />
             <h5>Capacitação</h5>
             <p>Oferecemos capacitação para empresas de todos os portes.</p>
           </div>
           <div>
-            <img src="./images/globo.png" />
+            <Image src="./images/globo.png" alt="Globo" />
             <h5>Personalização</h5>
             <p>
               Todos os nossos serviços são personalizados para atender a sua
@@ -61,7 +62,7 @@ export default function Home() {
         </div>
       </section>
       <footer>
-        <img src="./images/logo.svg" />
+        <Image src="./images/logo.svg" />
         <h5>Adiante RH</h5>
         <svg
           className="cs-ico-instagram"

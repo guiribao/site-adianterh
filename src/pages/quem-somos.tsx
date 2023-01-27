@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import Header from "../components/Header";
 
 export default function Home() {
@@ -18,7 +19,7 @@ export default function Home() {
           <p>A Adiante RH é uma consultoria de RH especializada em gestão de pessoas que ajuda empresas de diversos portes a estruturarem seus processos de RH e melhorar a gestão interna do capital humano, proporcionando a maximização dos resultados. Sabemos que cada cliente tem um perfil diferenciado e necessidades específicas, portanto, contamos com uma equipe profissional qualificada e pronta para prestar atendimento personalizado, prezando sempre pela excelência, agilidade, transparência e inovação em todos os serviços prestados, com foco em resultados.</p>
         </div>
         <div style={{backgroundColor: "#0AA9AF", padding: "10px 0", margin: "80px 0 10px 0"}}>
-        <img src="./images/Logo Whats.png" alt="AdianteRH - Consultoria de Recursos Humanos" style={{margin: "20px auto", display: "block", width: "200px"}}/>
+        <Image src="./images/Logo Whats.png" alt="AdianteRH - Consultoria de Recursos Humanos" style={{margin: "20px auto", display: "block", width: "200px"}}/>
         </div>
       </section>
       <section className="disclaimer">
@@ -55,7 +56,7 @@ export default function Home() {
         </div>
       </section>
       <footer>
-        <img src="./images/logo.svg" />
+        <Image src="./images/logo.svg" />
         <h5>Adiante RH</h5>
         <svg
           className="cs-ico-instagram"
