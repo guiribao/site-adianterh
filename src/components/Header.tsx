@@ -1,44 +1,44 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import HeaderProps from "../interfaces/IHeader";
+import IHeader from "../interfaces/IHeader";
+import IContent, { ISlide } from "../interfaces/IContent";
 import contents from "../slides.json";
 
-export default function Header(props: HeaderProps) {
-  let { content } = props;
-  let pageContent = contents[content];
+export default function Header(props: IHeader) {
+  let content: string = props.content;
+  let objContent = JSON.parse(JSON.stringify(contents));
+  let pageContent: IContent = objContent[content];
 
-  let [slide, setSlide] = useState({});
+  let [slide, setSlide] = useState({} as ISlide);
 
-  useEffect(() => {
-    let i = 0;
-    let timerSlide = null;
-    let updateSlide = () => {
-      setSlide(pageContent.slides[i]);
-  
-      if (i === pageContent.slides.length - 1) {
-        i = 0;
-        return;
-      }
-  
-      i += 1;
-    };
+  let i = 0;
+  let timerSlide = null;
+  let updateSlide = () => {
+    setSlide(pageContent.slides[i]);
 
-    updateSlide();
-
-    if (timerSlide) {
-      clearInterval(timerSlide);
+    if (i === pageContent.slides.length - 1) {
+      i = 0;
+      return;
     }
 
-    timerSlide = setInterval(updateSlide, 10000);
-  }, []);
+    i += 1;
+  };
+
+  updateSlide();
+
+  if (timerSlide) {
+    clearInterval(timerSlide);
+  }
+
+  timerSlide = setInterval(updateSlide, 10000);
 
   return (
     <header className="app-header">
       <nav>
         <div className="container app-menu">
           <div className="app-menu_logo">
-            <Image src=" ./images/logo.svg" />
+            <Image src=" ./images/logo.svg" alt="Adiante RH - Consultoria de Recursos Humanos" />
           </div>
           <ul className="app-menu_links">
             <li>
@@ -65,7 +65,7 @@ export default function Header(props: HeaderProps) {
           </p>
         </div>
         <div className="app-description__art">
-          <Image src={`./images/draw/${slide?.draw}.svg`} alt="AdianteRH Draw" />
+          <Image src={`http://localhost/images/draw/${slide?.draw}.svg`} width="0" height="0" alt="AdianteRH Draw" />
           <p>{slide?.description}</p>
         </div>
       </section>

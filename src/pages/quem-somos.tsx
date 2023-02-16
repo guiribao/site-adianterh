@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Header from "../components/Header";
+import logoCirculo from "../../public/images/logo_circulo.png";
 
 export default function Home() {
   return (
@@ -34,9 +35,9 @@ export default function Home() {
           }}
         >
           <Image
-            src="./images/Logo Whats.png"
+            src={logoCirculo}
             alt="AdianteRH - Consultoria de Recursos Humanos"
-            style={{ margin: "20px auto", display: "block", width: "200px" }}
+            style={{ margin: "20px auto", display: "block", width: "200px", height: "auto"}}
           />
         </div>
       </section>
@@ -91,7 +92,7 @@ export default function Home() {
         </div>
       </section>
       <footer>
-        <Image src="./images/logo.svg" alt="Adiante RH" />
+        <Image src="./images/logo.svg" width="0" height="0" alt="Adiante RH" />
         <h5>Adiante RH</h5>
         <svg
           className="cs-ico-instagram"

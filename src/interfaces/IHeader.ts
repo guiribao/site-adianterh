@@ -1,3 +1,3 @@
-export default interface HeaderProps {
+export default interface IHeader {
   content: string;
 }
