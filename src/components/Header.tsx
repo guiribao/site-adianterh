@@ -10,13 +10,12 @@ export default function Header(props: IHeader) {
   let objContent = JSON.parse(JSON.stringify(contents));
   let pageContent: IContent = objContent[content];
 
-  let [slide, setSlide] = useState({} as ISlide);
+  let [slide, setSlide] = useState(pageContent.slides[0] as ISlide);
 
-  let i = 0;
+  let i = 1;
   let timerSlide = null;
   let updateSlide = () => {
     setSlide(pageContent.slides[i]);
-
     if (i === pageContent.slides.length - 1) {
       i = 0;
       return;
@@ -25,20 +24,33 @@ export default function Header(props: IHeader) {
     i += 1;
   };
 
-  updateSlide();
-
-  if (timerSlide) {
-    clearInterval(timerSlide);
-  }
-
   timerSlide = setInterval(updateSlide, 10000);
+
+  let Slide = () => {
+    return (
+      <>
+        <Image
+          src={`http://localhost:3000/images/draw/${slide?.draw}.svg`}
+          width="100"
+          height="100"
+          alt="AdianteRH Draw"
+        />
+        <p>{slide?.description}</p>
+      </>
+    );
+  };
 
   return (
     <header className="app-header">
       <nav>
         <div className="container app-menu">
           <div className="app-menu_logo">
-            <Image src=" ./images/logo.svg" alt="Adiante RH - Consultoria de Recursos Humanos" />
+            <Image
+              src=" ./images/logo.svg"
+              alt="Adiante RH - Consultoria de Recursos Humanos"
+              width="100"
+              height="100"
+            />
           </div>
           <ul className="app-menu_links">
             <li>
@@ -65,8 +77,7 @@ export default function Header(props: IHeader) {
           </p>
         </div>
         <div className="app-description__art">
-          <Image src={`http://localhost/images/draw/${slide?.draw}.svg`} width="0" height="0" alt="AdianteRH Draw" />
-          <p>{slide?.description}</p>
+          { (pageContent.slides.length) ? <Slide></Slide> : ""}
         </div>
       </section>
     </header>

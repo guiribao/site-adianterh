@@ -18,7 +18,7 @@ export default function Home() {
       </Head>
 
       <Header 
-        content="start"
+        content="home"
       />
 
       <EnterpriseSolutions />

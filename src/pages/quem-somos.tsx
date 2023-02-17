@@ -10,7 +10,7 @@ export default function Home() {
         <title>Quem somos - AdianteRH</title>
       </Head>
 
-      <Header content="start" />
+      <Header content="home" />
 
       <section className="disclaimer">
         <div className="container">
@@ -30,14 +30,14 @@ export default function Home() {
         <div
           style={{
             backgroundColor: "#0AA9AF",
-            padding: "10px 0",
+            padding: "30px 0",
             margin: "80px 0 10px 0",
           }}
         >
           <Image
             src={logoCirculo}
             alt="AdianteRH - Consultoria de Recursos Humanos"
-            style={{ margin: "20px auto", display: "block", width: "200px", height: "auto"}}
+            style={{ margin: "20px auto", display: "block", width: "180px", height: "auto"}}
           />
         </div>
       </section>

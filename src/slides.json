@@ -1,5 +1,5 @@
 {
-  "start": {
+  "home": {
     "title": "Muito prazer,",
     "subtitle": "Somos a Adiante RH, gestão de pessoas em alta performance.",
     "slides": [
@@ -16,7 +16,9 @@
   "solutions": {
     "title": "Soluções",
     "subtitle": "Com o que podemos te ajudar hoje?",
-    "slides": []
+    "slides": [
+
+    ]
   },
   "contact": {
     "title": "Contato",
@@ -24,7 +26,7 @@
     "slides": [
       { 
         "draw": "contact",
-        "description": "Entre em contato conosco, responderemos o mais breve possível ..."
+        "description": "Entre em contato conosco"
       }
     ]
   }
