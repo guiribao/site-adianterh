@@ -10,21 +10,22 @@ export default function Header(props: IHeader) {
   let objContent = JSON.parse(JSON.stringify(contents));
   let pageContent: IContent = objContent[content];
 
-  let [slide, setSlide] = useState(pageContent.slides[0] as ISlide);
+  var i = 0;
+  let [slide, setSlide] = useState(pageContent.slides[i]);
 
-  let i = 1;
-  let timerSlide = null;
-  let updateSlide = () => {
-    setSlide(pageContent.slides[i]);
-    if (i === pageContent.slides.length - 1) {
-      i = 0;
-      return;
+  useEffect(() => {
+    var slideInterval = null;
+
+    if (slideInterval != null) {
+      clearInterval(slideInterval);
     }
 
-    i += 1;
-  };
+    slideInterval = setInterval(() => {
+      i = (i+1 == pageContent.slides.length) ? 0 : ++i;
+      setSlide(pageContent.slides[i]);
+    }, 7000);
 
-  timerSlide = setInterval(updateSlide, 10000);
+  }, []);
 
   let Slide = () => {
     return (
@@ -77,7 +78,7 @@ export default function Header(props: IHeader) {
           </p>
         </div>
         <div className="app-description__art">
-          { (pageContent.slides.length) ? <Slide></Slide> : ""}
+          {pageContent.slides.length ? <Slide></Slide> : ""}
         </div>
       </section>
     </header>
