@@ -30,7 +30,7 @@ export default function Header(props: IHeader) {
     return (
       <>
         <Image
-          src={`http://localhost:3000/images/draw/${slide?.draw}.svg`}
+          src={`${process.env.NEXT_PUBLIC_APP_URL}/images/draw/${slide?.draw}.svg`}
           width="100"
           height="100"
           alt="AdianteRH Draw"
