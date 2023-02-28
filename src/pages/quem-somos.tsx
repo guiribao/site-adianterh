@@ -22,12 +22,15 @@ export default function Home() {
             A Adiante RH é uma consultoria de RH especializada em gestão de
             pessoas que ajuda empresas de diversos portes a estruturarem seus
             processos de RH e melhorar a gestão interna do capital humano,
-            proporcionando a maximização dos resultados. Sabemos que cada
-            cliente tem um perfil diferenciado e necessidades específicas,
-            portanto, contamos com uma equipe profissional qualificada e pronta
-            para prestar atendimento personalizado, prezando sempre pela
-            excelência, agilidade, transparência e inovação em todos os serviços
-            prestados, com foco em resultados.
+            proporcionando a maximização dos resultados.
+          </p>
+          <br />
+          <p>
+            Sabemos que cada cliente tem um perfil diferenciado e necessidades
+            específicas, portanto, contamos com uma equipe profissional
+            qualificada e pronta para prestar atendimento personalizado,
+            prezando sempre pela excelência, agilidade, transparência e inovação
+            em todos os serviços prestados, com foco em resultados.
           </p>
         </div>
         <div
