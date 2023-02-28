@@ -5,8 +5,6 @@ import IHeader from "../interfaces/IHeader";
 import IContent, { ISlide } from "../interfaces/IContent";
 import contents from "../slides.json";
 
-import scrollDownGif from "../../public/images/scroll-down.gif";
-
 export default function Header(props: IHeader) {
   let content: string = props.content;
   let objContent = JSON.parse(JSON.stringify(contents));
@@ -46,16 +44,16 @@ export default function Header(props: IHeader) {
     <header className="app-header">
       <nav>
         <div className="container app-menu">
-          <div className="app-menu_logo">
-            <Link href="/">
+          <Link href="/">
+            <div className="app-menu_logo">
               <Image
                 src=" ./images/logo.svg"
                 alt="Adiante RH - Consultoria de Recursos Humanos"
                 width="100"
                 height="100"
               />
-            </Link>
-          </div>
+            </div>
+          </Link>
           <ul className="app-menu_links">
             <li>
               <Link href="/">Início</Link>
@@ -73,25 +71,18 @@ export default function Header(props: IHeader) {
         </div>
       </nav>
 
-      <section className="app-description container">
-        <div className="app-description__manifest">
-          <h2>{pageContent.title}</h2>
-          <p>
-            <span>{pageContent.subtitle}</span>
-          </p>
+      <section className="app-description">
+        <div className="container">
+          <div className="app-description__manifest">
+            <h2>{pageContent.title}</h2>
+            <p>
+              <span>{pageContent.subtitle}</span>
+            </p>
+          </div>
+          <div className="app-description__art">
+            {pageContent.slides.length ? <Slide></Slide> : ""}
+          </div>
         </div>
-
-        <div className="app-description__art">
-          {pageContent.slides.length ? <Slide></Slide> : ""}
-        </div>
-        
-        <Image
-          src={scrollDownGif}
-          className="scroll-down-gif"
-          alt="Role para baixa e saiba mais"
-          width="100"
-          height="100"
-        />
       </section>
     </header>
   );

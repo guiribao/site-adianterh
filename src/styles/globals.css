@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;700&display=swap");
 
 :root {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 * {
@@ -15,7 +15,7 @@ body {
 }
 
 .container {
-  width: 80%;
+  width: 60%;
   margin: 0 auto;
 }
 
@@ -32,13 +32,13 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #222;
+  background-color: #f9f9f9;
 }
 
 .app-header nav {
   border-bottom: 1px solid #eee;
   background: #f9f9f9;
-  box-shadow: -10px 5px 10px -8px #000;
+  box-shadow: -10px 5px 60px -68px #000;
 }
 
 .app-description {
@@ -51,8 +51,32 @@ body {
   justify-content: center;
 }
 
-.app-description .app-description__manifest {
-  display: none;
+.app-description .app-description__manifest {  
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 25% 0%;
+  background-color: #f7f7f7;
+  position: relative;
+}
+
+.app-description .app-description__manifest h2 {
+  color: #0aa9af;
+  font-size: 64px;
+}
+
+.app-description .app-description__manifest p {
+  color: #575757;
+  font-size: 1.4em;
+  font-weight: 700;
+  line-height: 1.5em;
+  padding: 15px 0 0 0;
+}
+
+.app-description .app-description__manifest p span {
+  padding: 0 0 3px 0;
+  border-bottom: 6px solid #0aa9af;
 }
 
 .app-description .app-description__art {
@@ -61,8 +85,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 70px;
+  justify-content: top;
+  gap: 20px;
 }
 
 .app-description .app-description__art img {
@@ -71,24 +95,34 @@ body {
 }
 
 .app-description .app-description__art p {
-  max-width: 75%;
+  max-width: 100%;
   margin: 0 auto;
   text-align: center;
+}
+
+.scroll-down-gif {
+  width: 32px;
+  height: 32px;
+  border-radius: 32px;
+  position: absolute;
+  margin: 0 auto 20px auto;
+  bottom: 0;
 }
 
 @media screen and (min-width: 1024px) {
   .app-description {
     flex-direction: row;
+    align-items: flex-start;
   }
 
   .app-description .app-description__manifest {
-    width: 80%;
-    height: 100%;
+    width: 60%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 0 10%;
+    align-items: flex-start;
+    padding: 25% 0%;
     background-color: #f7f7f7;
+    position: relative;
   }
 
   .app-description .app-description__manifest h2 {
@@ -110,6 +144,8 @@ body {
   }
 
   .app-description .app-description__art {
+    align-items: flex-end;
+    justify-content: center;
     gap: 50px;
   }
 
@@ -124,30 +160,31 @@ body {
     font-weight: 500;
     line-height: 1.5em;
     color: #888;
+    text-align: right;
   }
 }
 
 .app-menu {
-  margin: 20px auto;
+  margin: 10px auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .app-menu_logo img {
-  height: 28px;
+  height: 40px;
 }
 
 .app-menu_links {
   list-style: none;
-  display: flex;
   flex-direction: row;
   gap: 20px;
+  display: none;
 }
 
 .app-menu_links li a {
   color: #0aa9af;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   text-decoration: none;
   transition: all linear 0.079s;
@@ -173,6 +210,10 @@ body {
 }
 
 @media screen and (min-width: 1024px) {
+  .app-menu_links {
+    display: flex;
+  }
+
   .solucoes-list {
     flex-direction: row;
     justify-content: center;
@@ -186,7 +227,7 @@ body {
   .solucoes-list > div > img {
     height: 48px;
   }
-  .solucoes-list > div > p { 
+  .solucoes-list > div > p {
     text-align: center;
     width: 260px;
     padding: 0 10px;
@@ -195,12 +236,12 @@ body {
 
 .disclaimer {
   padding: 50px 0 10px 0;
-  
+
   font-size: 1.2em;
 }
 
 .disclaimer > div h2 {
-  margin: 0 0 30px 0 ;
+  margin: 0 0 30px 0;
 }
 
 .disclaimer > div p {
@@ -217,9 +258,7 @@ body {
 }
 
 .contato {
-  background-image: url("../../public/images/siga_conosco.jpg");
-  background-size: cover;
-  background-position: center center;
+  background-color: #0aa9af;
   display: flex;
   padding: 100px 0;
 }
@@ -233,29 +272,34 @@ body {
 .contato h2 {
   margin: 20px auto;
   text-align: center;
+  color: white;
+  border-bottom: 6px #25d366 dotted;
+  padding: 40px 20px;
 }
 
 .contato a {
   margin: 10px auto;
   position: relative;
-  max-width: 180px;
   padding: 8px 12px;
   text-align: center;
-  background-color: #0aa9af;
+  background-color: #25d366;
   border: 3px solid #0aa9af;
-  font-size: 16px;
+  font-size: 18px;
   text-transform: uppercase;
   text-decoration: none;
-  color: white;
+  color: #222;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
   border-radius: 6px;
   cursor: pointer;
   transition: all linear 0.1s;
 }
 
 .contato a:hover {
-  background-color: transparent;
-  color: black;
+  background-color: #075e54;
+  color: white;
   transform: scale(1.25);
   border: 3px solid #0aa9af;
 }
@@ -268,12 +312,12 @@ footer {
   padding: 100px 0px;
 }
 
-footer img {
+footer .footer-logo {
   height: 128px;
   width: 128px;
 }
 
-footer svg {
+footer .footer-insta {
   height: 48px;
-  fill: #f14e76;
+  width: 48px;
 }
