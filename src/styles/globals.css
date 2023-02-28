@@ -182,6 +182,51 @@ body {
   display: none;
 }
 
+.app-mobile-menu {
+  display: flex;
+  
+}
+
+.app-mobile-icon {
+  cursor: pointer;
+  position: relative;
+}
+
+.app-mobile-menu_links {
+  width: 40vw;
+  position: absolute;
+  z-index: 5;
+  top: 65px;
+  right: 20px;
+  background: #0aa9af;
+  padding: 30px 15px;
+  display: none;
+  list-style: none;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 50px 50px -45px #999;
+}
+
+.app-mobile-menu_links li {
+  padding: 5px 0;
+}
+
+.app-mobile-menu_links li a {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all linear 0.079s;
+}
+
+.app-mobile-menu input[name=showMenu] { display: none; }
+
+.app-mobile-menu input[name=showMenu]:checked + ul { 
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .app-menu_links li a {
   color: #0aa9af;
   font-size: 16px;
@@ -212,6 +257,10 @@ body {
 @media screen and (min-width: 1024px) {
   .app-menu_links {
     display: flex;
+  }
+
+  .app-mobile-menu {
+    display: none;
   }
 
   .solucoes-list {
