@@ -272,14 +272,27 @@ body {
     justify-content: center;
   }
   .solucoes-list > div {
+    height: 250px;
     display: flex;
     flex-direction: column;
     gap: 10px;
     align-items: center;
+    box-sizing: border-box;
+    border: 7px solid #fff;
+    transition: .15s linear all;
+    box-shadow: 10px 0 50px -40px #555;
   }
   .solucoes-list > div > img {
     height: 48px;
   }
+  .solucoes-list > div > h5 {
+    font-size: 1.2em;
+  }
+  .solucoes-list > div:hover {
+    border: 7px solid #fdfdfd;
+    box-shadow: 10px 0 50px -30px #333;
+  }
+
   .solucoes-list > div > p {
     text-align: center;
     width: 260px;
@@ -397,4 +410,10 @@ footer .footer-logo {
 footer .footer-insta {
   height: 48px;
   width: 48px;
+}
+
+footer p a {
+  font-weight: 700;
+  color: #0aa9af;
+  text-decoration: none;
 }

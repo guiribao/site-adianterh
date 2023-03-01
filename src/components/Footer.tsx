@@ -21,7 +21,11 @@ const Footer = () => {
         />
       </a>
       <p>(51) 99303-6018</p>
-      <p>consultoria@adianterh.com.br</p>
+      <p>
+        <a href="mailto:consultoria@adianterh.com.br">
+          consultoria@adianterh.com.br
+        </a>
+      </p>
       <p>Atendemos todo território nacional</p>
     </footer>
   );
