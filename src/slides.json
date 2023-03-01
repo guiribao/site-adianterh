@@ -21,6 +21,11 @@
   "contact": {
     "title": "Contato",
     "subtitle": "Ficou com alguma dúvida?",
-    "slides": []
+    "slides": [
+      {
+        "draw": "contact",
+        "description": "Entre em contato agora mesmo com a nossa equipe! Estamos prontos para te atender."
+      }
+    ]
   }
 }
